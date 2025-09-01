@@ -1,0 +1,26 @@
+{
+  "name": "3-column-preview-card-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flaviovich/frontendmentor-3-column-preview-card.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/flaviovich/frontendmentor-3-column-preview-card/issues"
+  },
+  "homepage": "https://github.com/flaviovich/frontendmentor-3-column-preview-card#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "tailwindcss": "^4.1.12"
+  }
+}
