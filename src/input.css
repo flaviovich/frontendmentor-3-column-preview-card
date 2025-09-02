@@ -1,1 +1,29 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@theme {
+  --color-gold-500: hsl(31, 77%, 52%);
+  --color-cyan-800: hsl(184, 100%, 22%);
+  --color-green-950: hsl(179, 100%, 13%);
+  --color-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --color-gray-100: hsl(0, 0%, 95%);
+  --font-lexend: "Lexend", sans-serif;
+  --font-big-shoulders: "Big Shoulders", sans-serif;
+}
+
+@layer base {
+  article {
+    @apply max-w-[320px] min-w-[250px] p-12;
+  }
+
+  h3 {
+    @apply font-big-shoulders font-bold text-gray-100 text-4xl uppercase py-6;
+  }
+
+  p {
+    @apply font-lexend text-transparent-white leading-7 mb-6;
+  }
+
+  button {
+    @apply font-bold bg-gray-100 rounded-4xl px-9 py-3;
+  }
+}
