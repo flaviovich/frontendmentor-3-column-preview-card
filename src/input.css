@@ -13,6 +13,10 @@
 @layer base {
   article {
     @apply max-w-[320px] min-w-[250px] p-12;
+
+    >img {
+      @apply w-16 w-auto mb-4
+    }
   }
 
   h3 {
@@ -20,7 +24,7 @@
   }
 
   p {
-    @apply font-lexend text-transparent-white leading-7 mb-6;
+    @apply font-lexend text-transparent-white leading-7 mb-6 sm:mb-20;
   }
 
   button {

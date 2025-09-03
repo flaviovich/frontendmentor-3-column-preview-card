@@ -14,6 +14,7 @@
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-bold: 700;
+    --radius-xl: 0.75rem;
     --radius-4xl: 2rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -190,23 +191,31 @@
       max-width: 96rem;
     }
   }
-  .mb-4 {
-    margin-bottom: calc(var(--spacing) * 4);
+  .my-6 {
+    margin-block: calc(var(--spacing) * 6);
   }
   .flex {
     display: flex;
   }
-  .w-16 {
-    width: calc(var(--spacing) * 16);
-  }
-  .w-auto {
-    width: auto;
+  .min-h-dvh {
+    min-height: 100dvh;
   }
   .flex-col {
     flex-direction: column;
   }
   .items-center {
     align-items: center;
+  }
+  .justify-center-safe {
+    justify-content: safe center;
+  }
+  .rounded-t-xl {
+    border-top-left-radius: var(--radius-xl);
+    border-top-right-radius: var(--radius-xl);
+  }
+  .rounded-b-xl {
+    border-bottom-right-radius: var(--radius-xl);
+    border-bottom-left-radius: var(--radius-xl);
   }
   .bg-cyan-800 {
     background-color: var(--color-cyan-800);
@@ -229,14 +238,34 @@
   .text-gold-500 {
     color: var(--color-gold-500);
   }
-  .text-gray-100 {
-    color: var(--color-gray-100);
-  }
   .text-green-950 {
     color: var(--color-green-950);
   }
-  .uppercase {
-    text-transform: uppercase;
+  .sm\:flex-row {
+    @media (width >= 40rem) {
+      flex-direction: row;
+    }
+  }
+  .sm\:rounded-r-xl {
+    @media (width >= 40rem) {
+      border-top-right-radius: var(--radius-xl);
+      border-bottom-right-radius: var(--radius-xl);
+    }
+  }
+  .sm\:rounded-tr-none {
+    @media (width >= 40rem) {
+      border-top-right-radius: 0;
+    }
+  }
+  .sm\:rounded-bl-none {
+    @media (width >= 40rem) {
+      border-bottom-left-radius: 0;
+    }
+  }
+  .sm\:rounded-bl-xl {
+    @media (width >= 40rem) {
+      border-bottom-left-radius: var(--radius-xl);
+    }
   }
 }
 @layer base {
@@ -244,6 +273,11 @@
     max-width: 320px;
     min-width: 250px;
     padding: calc(var(--spacing) * 12);
+    >img {
+      margin-bottom: calc(var(--spacing) * 4);
+      width: calc(var(--spacing) * 16);
+      width: auto;
+    }
   }
   h3 {
     padding-block: calc(var(--spacing) * 6);
@@ -261,6 +295,9 @@
     --tw-leading: calc(var(--spacing) * 7);
     line-height: calc(var(--spacing) * 7);
     color: var(--color-transparent-white);
+    @media (width >= 40rem) {
+      margin-bottom: calc(var(--spacing) * 20);
+    }
   }
   button {
     border-radius: var(--radius-4xl);
