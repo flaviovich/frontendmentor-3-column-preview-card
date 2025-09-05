@@ -9,7 +9,7 @@ The goal of this project was to build a responsive and visually appealing interf
 ![Project Screenshot](./assets/images/screenshot.png)
 
 ### 🔗 Links
-- Live Site: [GitHub Pages](https://your-live-site.com)
+- Live Site: [GitHub Pages](https://flaviovich.github.io/frontendmentor-3-column-preview-card/)
 - Repository: [GitHub](https://github.com/flaviovich/frontendmentor-3-column-preview-card)
 
 ---
