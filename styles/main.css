@@ -27,13 +27,15 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   border-radius: 0.5rem;
   overflow: hidden;
-  max-width: 320px;
-  min-width: 300px;
 }
 
 .card {
+  max-width: 320px;
+  min-width: 300px;
   padding: 3rem;
   display: flex;
   flex-direction: column;
@@ -73,6 +75,7 @@ body {
   background-color: white;
   border: none;
   border-radius: 2rem;
+  border: 2px solid transparent;
   padding: 1rem 2rem;
   font-size: medium;
   align-self: flex-start;
@@ -88,4 +91,20 @@ body {
 
 .btn-luxury {
   color: var(--color-green-950);
+}
+
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .card-description {
+    margin-bottom: 3rem;
+  }
+
+  .btn:hover {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+  }
 }
